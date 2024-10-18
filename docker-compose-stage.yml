@@ -3,7 +3,7 @@ services:
   backend:
     build: .
     container_name: backend
-    command:  gunicorn core.wsgi --bind 0.0.0.0:8000
+    command: gunicorn core.wsgi --bind 0.0.0.0:8000
     volumes:
       - ./core:/app
       - static_volume:/app/static
@@ -13,7 +13,19 @@ services:
     environment:
       - SECRET_KEY=test
       - DEBUG=False
-      - ALLOWED_HOSTS=*
+    depends_on:
+      - frontend
+      
+  frontend:
+    build:
+      context: ./frontend 
+    container_name: frontend
+    command: npm start 
+    ports:
+      - "3000:3000"
+    stdin_open: true
+    tty: true
+
   nginx:
     image: nginx:latest
     container_name: nginx
@@ -26,6 +38,8 @@ services:
       - media_volume:/home/app/media
     depends_on:
       - backend
+      - frontend
+
 volumes:
   static_volume:
   media_volume:

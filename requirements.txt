@@ -8,6 +8,7 @@ python-decouple
 
 # third party modules
 django-filter
+
 django-cors-headers
 drf_yasg
 djoser
