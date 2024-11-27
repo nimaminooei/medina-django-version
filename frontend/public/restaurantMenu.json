@@ -1,0 +1,46 @@
+{
+  "categories": [
+    { "id": 1, "title": "پیش‌غذا", "icon": "/images/food.png" },
+    { "id": 2, "title": "غذاهای اصلی", "icon": "maincourse.png" },
+    { "id": 3, "title": "دسر", "icon": "dessert.png" },
+    { "id": 4, "title": "نوشیدنی", "icon": "beverage.png" }
+  ],
+  "items": [
+    {
+      "id": 1,
+      "title": "سالاد سزار",
+      "description": "یک پیش‌غذای خوشمزه",
+      "image": "/images/xx.png",
+      "price": "5.00",
+      "preparationTime": "10min",
+      "categoryId": 1
+    },
+    {
+      "id": 2,
+      "title": "پیتزا مارگاریتا",
+      "description": "پیتزای سنتی ایتالیایی",
+      "image": "/images/pitzza.png",
+      "price": "8.00",
+      "preparationTime": "20min",
+      "categoryId": 2
+    },
+    {
+      "id": 3,
+      "title": "تیرامیسو",
+      "description": "دسر معروف ایتالیایی",
+      "image": "tiramisu.png",
+      "price": "6.00",
+      "preparationTime": "15min",
+      "categoryId": 3
+    },
+    {
+      "id": 4,
+      "title": "لیموناد",
+      "description": "نوشیدنی خنک و تازه",
+      "image": "lemonade.png",
+      "price": "3.00",
+      "preparationTime": "5min",
+      "categoryId": 4
+    }
+  ]
+}

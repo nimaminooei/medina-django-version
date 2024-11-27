@@ -1,24 +1,17 @@
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  Switch,
-} from "react-router-dom";
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
-import SectionOne from "./pages/SectionOne";
-import Products from "./pages/Products";
-import Cards from "./components/Cards";
+
+import Header2 from "./pages/Header2";
 
 function App() {
   return (
     <Router>
+      <Header2 /> {/* Include the Header component */}
       <Routes>
-        <Route path="/" exact component={Home} />
-        <Route path="/category/:id" component={Cards} />
-
         <Route path="/" element={<Home />} />
-        <Route path="/sectionone" element={<SectionOne />} />
-        <Route path="/two" element={<Products />} />
+
+        {/* Route for category */}
       </Routes>
     </Router>
   );
