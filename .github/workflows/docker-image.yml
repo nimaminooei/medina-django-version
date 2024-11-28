@@ -24,4 +24,4 @@ jobs:
           cd ${{secrets.PROJECT_PATH}}
           docker-compose -f docker-compose-stage.yml down
           git pull
-          docker-compose -f docker-compose-stage.yml up -d
+          docker-compose -f docker-compose-stage.yml restart
