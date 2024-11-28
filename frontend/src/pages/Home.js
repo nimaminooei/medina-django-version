@@ -70,7 +70,7 @@ function Home() {
                 className="w-32 h-32 sm:w-24 sm:h-24"
               />
               <div className="flex flex-col text-white justify-center items-center text-center">
-                <div>Welcome to</div>
+                <div>Welcome toOo</div>
                 <div>MEDINA restaurant</div>
               </div>
               <div className="flex flex-col gap-2 mt-4">
