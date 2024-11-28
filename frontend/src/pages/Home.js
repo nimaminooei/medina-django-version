@@ -31,7 +31,7 @@ function Home() {
 
   useEffect(() => {
     axios
-      .get("/restaurantMenu.json")
+      .get("/api/items/?format=json")
       .then((response) => {
         setCategories(response.data.categories);
       })
