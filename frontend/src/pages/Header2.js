@@ -15,7 +15,7 @@ function Header2() {
   useEffect(() => {
     // Load restaurant menu categories from the JSON file in the public folder
     axios
-      .get("/restaurantMenu.json")
+      .get("/api/items/?format=json")
       .then((response) => {
         setCategories(response.data.categories);
         fetchCards(response.data.categories[0].id);
@@ -28,7 +28,7 @@ function Header2() {
   const fetchCards = (categoryId) => {
     // Load restaurant menu items from the JSON file in the public folder
     axios
-      .get("/restaurantMenu.json")
+      .get("/api/items/?format=json")
       .then((response) => {
         const newCards = response.data.items.filter(
           (item) => item.categoryId === categoryId
@@ -81,11 +81,11 @@ function Header2() {
                     onClick={() => handleCategoryClick(index)}
                   >
                     <img
-                      src={`/icons/${category.icon}`}
-                      alt={`${category.title} icon`}
+                      src={`/icons/${category.image}`}
+                      alt={`${category.name} icon`}
                       className="w-5 h-5 mb-1"
                     />
-                    <span className="">{category.title}</span>
+                    <span className="">{category.name}</span>
                   </div>
                 ))}
             </nav>
@@ -108,21 +108,21 @@ function Header2() {
               >
                 <img
                   src={card.image}
-                  alt={card.title}
+                  alt={card.name}
                   className="card-image rounded-lg mb-4 object-cover w-full"
                 />
 
                 <h2 className=" flex justify-center items-center text-2xl  py-1 px-1 font-bold bg-blue-700 rounded-full">
-                  {card.title}
+                  {card.name}
                 </h2>
                 <p className="flex justify-center items-center  text-gray-700">
                   {card.description}
                 </p>
                 <div className="flex justify-between items-center mt-4">
                   <div className="  text-lg font-semibold bg-blue-700 rounded-full py-1 px-1">
-                    T{card.price}
+                    {card.price} &zwnj;T
                   </div>
-                  <div className="flex items-center">
+                  {/* <div className="flex items-center">
                     <img
                       src="https://img.icons8.com/ios-filled/50/000000/clock.png"
                       alt="Time Icon"
@@ -131,7 +131,7 @@ function Header2() {
                     <span className=" bg-blue-700 rounded-full py-1 px-1">
                       {card.preparationTime}
                     </span>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             ))}

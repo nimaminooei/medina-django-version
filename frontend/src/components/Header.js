@@ -8,7 +8,7 @@ const Navbar = () => {
 
   return (
     <nav className="p-[.3em]">
-      <div className="flex items-center justify-between">
+      {/* <div className="flex items-center justify-between">
         <div> MEDINA</div>
         <div className="lg:hidden">
           <button
@@ -57,7 +57,7 @@ const Navbar = () => {
             تماس با ما
           </a>
         </div>
-      </Transition>
+      </Transition> */}
     </nav>
   );
 };
