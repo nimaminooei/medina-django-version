@@ -1,0 +1,38 @@
+name: Docker Image CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+
+  Test:
+    name: Test
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: Setup Docker-Compose
+      run: docker compose up -d
+    - name: Run Tests
+      run: docker exec backend sh -c "pytest ."
+
+
+  Deploy:
+    if: ${{ always() && contains(join(needs.*.result, ','),'success') }}
+    name: Deploy
+    needs: Test
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - name: connect and execute commands
+      uses: appleboy/ssh-action@master
+      with:
+        username: ${{secrets.USERNAME}}
+        password: ${{secrets.PASSWORD}}
+        host: ${{secrets.HOST}}
+        port: ${{secrets.PORT}}
+        script: |
+         ls

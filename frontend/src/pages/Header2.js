@@ -81,7 +81,7 @@ function Header2() {
                     onClick={() => handleCategoryClick(index)}
                   >
                     <img
-                      src={`/icons/${category.image}`}
+                      src={`/${category.image}`}
                       alt={`${category.name} icon`}
                       className="w-5 h-5 mb-1"
                     />
