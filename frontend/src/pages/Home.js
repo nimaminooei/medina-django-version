@@ -73,7 +73,8 @@ function Home() {
                 <div>Welcome to</div>
                 <div>MEDINA restaurant</div>
               </div>
-              <div className="flex flex-col gap-2 mt-4">
+          {!showCategories && 
+          <div className="flex flex-col gap-2 mt-4">
                 <button
                   onClick={handleMenuClick}
                   className="text-white border-white border-[.1em] flex items-center justify-center rounded-full w-[14em] h-[3em] sm:w-[12em] sm:h-[2.5em] transform transition-transform duration-300 ease-in-out scale-90 text-ellipsis overflow-hidden whitespace-nowrap"
@@ -86,12 +87,12 @@ function Home() {
                 >
                   About
                 </button>
-              </div>
+              </div>}
               {showCategories &&
                 categories.map((category) => (
                   <HomeSection
                     key={category.id}
-                    text={category.title}
+                    text={category.name}
                     navigateTo={`/category/${category.id}`}
                   />
                 ))}
