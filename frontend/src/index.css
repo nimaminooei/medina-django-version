@@ -3,6 +3,12 @@
 @tailwind utilities;
 body {
   background-color: white;
+  position: relative;
+  background-image: url(../public/images/home.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 .parham {
   background-image: url(../public/images/tras.png);

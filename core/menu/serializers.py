@@ -37,7 +37,7 @@ class ItemSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = item
-        fields = ['id', 'name', 'description', 'image','price','categoryId']
+        fields = ['id', 'name', 'description', 'image','price','time','categoryId']
 
     def get_image(self, obj):
         if obj.image:
