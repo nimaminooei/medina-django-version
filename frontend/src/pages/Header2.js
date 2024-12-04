@@ -19,7 +19,7 @@ function Header2() {
   useEffect(() => {
     // Load restaurant menu categories from the JSON file in the public folder
     axios
-      .get("http://188.121.115.187/api/items/?format=json")
+      .get("/api/items/?format=json")
       .then((response) => {
         setCategories(response.data.categories);
         fetchCards(response.data.categories[0].id);
@@ -33,7 +33,7 @@ function Header2() {
   const fetchCards = (categoryId) => {
     // Load restaurant menu items from the JSON file in the public folder
     axios
-      .get("http://188.121.115.187/api/items/?format=json")
+      .get("/api/items/?format=json")
       .then((response) => {
         const newCards = response.data.items.filter(
           (item) => item.categoryId === categoryId
@@ -103,7 +103,7 @@ function Header2() {
                       }`}
                     >
                       <img
-                        src={`http://188.121.115.187/${category.image}`}
+                        src={`${category.image}`}
                         alt={`${category.name} icon`}
                       />
                     </div>
