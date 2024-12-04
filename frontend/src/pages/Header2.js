@@ -19,7 +19,7 @@ function Header2() {
   useEffect(() => {
     // Load restaurant menu categories from the JSON file in the public folder
     axios
-      .get("/api/items/?format=json")
+      .get("http://188.121.115.187/api/items/?format=json")
       .then((response) => {
         setCategories(response.data.categories);
         fetchCards(response.data.categories[0].id);
@@ -33,7 +33,7 @@ function Header2() {
   const fetchCards = (categoryId) => {
     // Load restaurant menu items from the JSON file in the public folder
     axios
-      .get("/api/items/?format=json")
+      .get("http://188.121.115.187/api/items/?format=json")
       .then((response) => {
         const newCards = response.data.items.filter(
           (item) => item.categoryId === categoryId
@@ -103,11 +103,11 @@ function Header2() {
                       }`}
                     >
                       <img
-                        src={`${category.image}`}
+                        src={`http://188.121.115.187/${category.image}`}
                         alt={`${category.name} icon`}
                       />
                     </div>
-                    <span className="text-xs">{category.title}</span>
+                    <span className="text-xs">{category.name}</span>
                   </div>
                 ))}
             </nav>
@@ -122,30 +122,27 @@ function Header2() {
               />
             </div>
           </header>
-          <div className="container flex flex-col justify-center items-center gap-4 p-4 italiana-regular">
+          <div className="container flex flex-row-reverse justify-center flex-wrap items-center gap-4 p-4 italiana-regular">
             {cards.map((card) => (
               <div
                 key={card.id}
-                className="flex flex-col justify-center items-center text-white pt-[1em] border-[.3em] border-[#0E48C5] rounded-3xl shadow-xl w-70 p-[.3em] m-4 bg-green-200 bg-opacity-30"
+                className="flex flex-col justify-center items-center text-white pt-[1.5em] border-[.3em] border-[#0E48C5] rounded-3xl shadow-xl w-[18em] p-[.3em] m-4 bg-green-200 bg-opacity-30"
               >
                 <img
-                  src={card.image}
+                  src={`http://188.121.115.187/${card.image}`}
                   alt={card.name}
-                  className="card-image rounded-lg mb-4 object-cover w-[80%]"
+                  className="card-image rounded-lg mb-4 object-cover w-[13em] h-[13em]"
                 />
                 <h2 className="flex justify-center items-center text-2xl py-1  font-bold bg-blue-700 rounded-full w-60">
                   {card.name}
                 </h2>
-                <p className="flex justify-centr items-start text-gray-600">
+                <p className="text-center text-gray-600">
                   {card.description}
                 </p>
-                <div className="flex justify-between gap-[8em] items-center mt-4">
-                  <div className="text-lg font-semibold bg-blue-700 rounded-full py-1 px-1 flex items-center">
+                <div className="flex justify-between gap-[8em] items-center mt-4 w-[100%]">
+                  <div className="text-lg font-semibold bg-blue-700 rounded-full py-[1px] ml-[1em] px-[5px] flex items-center ">
                     <div className="text-[1em] text-nowrap"> &zwnj; T  &zwnj;</div>
                     {card.price}
-                  </div>
-                  <div className="text-lg font-semibold bg-blue-700 rounded-full py-1 px-[.3em] flex items-center">
-                  {time}  <FaClock className="ml-2" /> 
                   </div>
                 </div>
               </div>

@@ -35,7 +35,7 @@ function Home() {
 
   useEffect(() => {
     axios
-      .get("/api/items/?format=json")
+      .get("http://188.121.115.187/api/items/?format=json")
       .then((response) => {
         setCategories(response.data.categories);
       })
