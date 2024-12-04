@@ -84,10 +84,10 @@ function Header2() {
               <img
                 src="https://img.icons8.com/ios-glyphs/30/ffffff/back.png"
                 alt="Back to Home"
-                className="w-7 h-7 mx-[2em] bg-blue-700 py-1 px-1 rounded-full"
+                className="w-7 h-7  bg-blue-700 py-1 px-1 rounded-full"
               />
             </button>
-            <nav className="categories-nav" ref={navRef}>
+            <nav className="categories-nav " ref={navRef}>
               {categories.length > 0 &&
                 categories.map((category, index) => (
                   <div
@@ -111,12 +111,12 @@ function Header2() {
                   </div>
                 ))}
             </nav>
-            <div className="">
+            <div className=" flex justify-center items-center w-[4em] h-[3em] bg-[#0E48C5] rounded-full">
               {" "}
               {/* Added margin to separate logo and categories */}
               <img
                 onClick={() => navigate("/")}
-                className="h-[3em] w-[3em] mx-[2em] bg-[#0E48C5] rounded-full"
+                className="h-[2em] w-[2em]   rounded-full"
                 src="/images/logohome.png"
                 alt="Logo"
               />
@@ -141,7 +141,8 @@ function Header2() {
                 </p>
                 <div className="flex justify-between gap-[12em] items-center mt-4">
                   <div className="text-lg font-semibold bg-blue-700 rounded-full py-1 px-1 flex items-center">
-                    T{card.price}
+                    <div className="text-[.7em] text-nowrap">هزار تومن</div>
+                    {card.price}
                   </div>
                   <div className="text-lg font-semibold bg-blue-700 rounded-full py-1 px-1 flex items-center">
                     <FaClock className="ml-2" /> {time}

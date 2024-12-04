@@ -21,6 +21,7 @@
   height: 5rem; /* Reduced height */
   scrollbar-width: none; /* Firefox */
   -ms-overflow-style: none; /* Internet Explorer 10+ */
+  -webkit-overflow-scrolling: touch;
 }
 
 .categories-nav::-webkit-scrollbar {
@@ -80,6 +81,7 @@
   height: 80px; /* Reduced height */
   white-space: nowrap;
   scrollbar-width: none; /* Hide scrollbar */
+  -webkit-overflow-scrolling: touch;
 }
 
 .categories-nav::-webkit-scrollbar {
@@ -118,6 +120,8 @@
 }
 
 .category-text {
+  font-weight: 400;
+  font-style: normal;
   margin-top: 0.5em;
   font-size: 0.8em;
   color: #333;

@@ -51,8 +51,6 @@ services:
       - SECRET_KEY=test
       - DEBUG=True
       - ALLOWED_HOSTS=*
-    depends_on:
-      - frontend
     networks:
       - app-network
 
@@ -61,6 +59,8 @@ services:
       context: ./frontend
     container_name: frontend
     command: npm start
+    volumes:
+      - ./frontend:/app
     ports:
       - "3000:3000"
     stdin_open: true
