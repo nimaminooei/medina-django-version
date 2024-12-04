@@ -35,7 +35,7 @@ function Home() {
 
   useEffect(() => {
     axios
-      .get("/restaurantMenu.json")
+      .get("/api/items/?format=json")
       .then((response) => {
         setCategories(response.data.categories);
       })
@@ -130,7 +130,7 @@ function Home() {
                 categories.map((category) => (
                   <HomeSection
                     key={category.id}
-                    text={category.title}
+                    text={category.name}
                     navigateTo={`/category/${category.id}`}
                   />
                 ))}
