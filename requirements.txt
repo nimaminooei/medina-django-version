@@ -14,7 +14,7 @@ drf_yasg
 djoser
 djangorestframework_simplejwt
 social-auth-app-django
-
+django-admin-sortable
 # deployment module
 gunicorn
 
