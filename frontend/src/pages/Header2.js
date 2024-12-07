@@ -129,7 +129,7 @@ function Header2() {
                 className="flex flex-col justify-center items-center text-white pt-[1.5em] h-[26em] border-[.3em] border-[#0E48C5] rounded-3xl shadow-xl w-[18em] p-[.3em] m-4 bg-green-200 bg-opacity-30"
               >
                 <img
-                  src={`http://188.121.115.187/${card.image}`}
+                  src={`${card.image}`}
                   alt={card.name}
                   className="card-image rounded-lg mb-4 object-cover w-[13em] h-[13em]"
                 />
