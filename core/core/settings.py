@@ -93,6 +93,11 @@ CORS_ALLOWED_ORIGINS = [
     "http://127.0.0.1",                     
 ]
 
+CSRF_TRUSTED_ORIGINS = [
+    "https://medina-restaurant.ir",
+    "https://www.medina-restaurant.ir",
+]
+
 
 DATABASES = {
     'default': {
