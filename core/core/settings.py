@@ -25,7 +25,11 @@ SECRET_KEY = 'django-insecure-fx04lb1e$yzvqk(o9)m4bdr*p4h%)m$9qo$ia42mm6f83k968f
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = [
+    "medina-restaurant.ir",
+    "www.medina-restaurant.ir",
+]
+
 
 
 # Application definition
@@ -79,19 +83,16 @@ REST_FRAMEWORK = {
 
 WSGI_APPLICATION = 'core.wsgi.application'
 
-CORS_ALLOW_ALL_ORIGINS = True # If this is used then `CORS_ALLOWED_ORIGINS` will not have any effect
-# CORS_ALLOW_CREDENTIALS = True
+CORS_ALLOW_ALL_ORIGINS = True
 
 CORS_ALLOWED_ORIGINS = [
-    "https://medina-restaurant.ir",    
+    "https://medina-restaurant.ir", 
     "https://www.medina-restaurant.ir",     
     "http://localhost:8080",                
     "http://127.0.0.1:5500",                
     "http://127.0.0.1",                     
 ]
 
-# Database
-# https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
 DATABASES = {
     'default': {
