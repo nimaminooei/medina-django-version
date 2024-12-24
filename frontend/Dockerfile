@@ -7,8 +7,9 @@ WORKDIR /app
 # کپی کردن package.json و package-lock.json
 COPY package*.json ./
 
-# نصب وابستگی‌ها
-RUN npm install
+RUN npm cache clean --force && npm install
+
+RUN npm install --prefer-offline --no-audit --progress=false
 
 # کپی کردن سایر فایل‌ها
 COPY . .
