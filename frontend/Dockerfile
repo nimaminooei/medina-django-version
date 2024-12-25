@@ -5,7 +5,8 @@ FROM node:22-alpine
 WORKDIR /app
 
 # کپی کردن package.json و package-lock.json
-COPY package*.json ./
+COPY package.json ./
+COPY package-lock.json ./
 
 RUN npm install
 
