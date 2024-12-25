@@ -7,9 +7,7 @@ WORKDIR /app
 # کپی کردن package.json و package-lock.json
 COPY package*.json ./
 
-RUN npm cache clean --force && npm install
-
-RUN npm install --prefer-offline --no-audit --progress=false
+RUN npm install
 
 
 COPY . .
