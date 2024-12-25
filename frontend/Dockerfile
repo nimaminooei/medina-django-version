@@ -1,5 +1,5 @@
 # استفاده از تصویر پایه Node.js
-FROM node:20
+FROM node:22-alpine
 
 # تنظیم دایرکتوری کاری
 WORKDIR /app
@@ -11,7 +11,7 @@ RUN npm cache clean --force && npm install
 
 RUN npm install --prefer-offline --no-audit --progress=false
 
-# کپی کردن سایر فایل‌ها
+
 COPY . .
 
 EXPOSE 3000
