@@ -28,6 +28,7 @@ DEBUG = True
 ALLOWED_HOSTS = [
     "medina-restaurant.ir",
     "www.medina-restaurant.ir",
+    "example.com",
 ]
 
 
