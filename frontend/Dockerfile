@@ -1,5 +1,5 @@
 # استفاده از تصویر پایه Node.js
-FROM node:22-alpine
+FROM node:16-alpine
 
 # تنظیم دایرکتوری کاری
 WORKDIR /app
