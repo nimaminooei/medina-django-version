@@ -3,8 +3,8 @@ from adminsortable.models import SortableMixin
 
 class category(SortableMixin):
     TRANSACTION_STATUS = (
-        ('DRINK', 'drink menu'),
-        ('FOOD', 'food menu'),
+        ('DRINK', 'drink items'),
+        ('FOOD', 'food items'),
 
     )
 
