@@ -26,7 +26,6 @@ def get_categories_and_items(request):
     categories = category.objects.all()
     items = item.objects.all()
 
-
     if side_filter:
         categories = categories.filter(side=side_filter)
         items = items.filter(category__side=side_filter)
@@ -37,4 +36,4 @@ def get_categories_and_items(request):
     return Response({
         'categories': category_serializer.data,
         'items': item_serializer.data
-        })
+    })
