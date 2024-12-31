@@ -2,15 +2,12 @@ from django.db import models
 from adminsortable.models import SortableMixin
 
 class category(SortableMixin):
-<<<<<<< HEAD
     TRANSACTION_STATUS = (
         ('DRINK', 'drink items'),
         ('FOOD', 'food items'),
 
     )
 
-=======
->>>>>>> parent of 31346a1 (ی)
     name = models.CharField(max_length=255, unique=True, null=False, blank=False)
     image = models.ImageField(upload_to='images/', null=True, blank=True)
     order = models.PositiveIntegerField(default=0, editable=False, db_index=True)  
