@@ -65,6 +65,15 @@ function Home() {
               </div>
             </div>
           </div>
+          <div className="w-[10em] h-[5em] border-[#0E48C5] border-[.2em] rounded-2xl mt-[1em] flex justify-center items-center">
+            <div className=" w-[9em] h-[4em] bg-[#0E48C5] rounded-2xl flex justify-center items-center px-[2em] flex-col">
+              <div className="text-white text-sm text-nowrap">
+                {" "}
+                Operation hours:
+              </div>
+              <div className="text-white text-sm"> 9:00 - 24:00</div>
+            </div>
+          </div>
         </section>
       )}
     </div>
