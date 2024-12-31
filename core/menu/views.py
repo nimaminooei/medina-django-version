@@ -22,13 +22,19 @@ from .serializers import CategorySerializer, ItemSerializer
 
 @api_view(['GET'])
 def get_categories_and_items(request):
+    side_filter = request.query_params.get('side') 
     categories = category.objects.all()
     items = item.objects.all()
-    
+
+
+    if side_filter:
+        categories = categories.filter(side=side_filter)
+        items = items.filter(category__side=side_filter)
+
     category_serializer = CategorySerializer(categories, many=True)
     item_serializer = ItemSerializer(items, many=True)
 
     return Response({
         'categories': category_serializer.data,
         'items': item_serializer.data
-    })
+        })
