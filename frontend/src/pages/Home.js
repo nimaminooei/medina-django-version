@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { FaUtensils, FaGlassCheers } from "react-icons/fa";
+// import { FaUtensils, FaGlassCheers } from "react-icons/fa";
+import { FaUtensils, FaPhone,FaGlassCheers, FaClock, FaArrowLeft } from "react-icons/fa"; // Import the icons from react-icons
 import "./Header2.css"; // Import the CSS file
-
 function Home() {
   const [showLogo, setShowLogo] = useState(true);
   const navigate = useNavigate();
@@ -21,7 +21,7 @@ function Home() {
   };
 
   return (
-    <div className="home-background flex flex-col items-center justify-center min-h-screen p-4">
+    <div className="home-background flex flex-col items-center justify-center min-h-screen p-4 ">
       {showLogo ? (
         <div className="flex items-center justify-center border-[.3em] border-[#0E48C5] p-4 rounded-3xl">
           <div className="flex flex-col items-center bg-[#0E48C5] h-[14em] w-[14em] sm:h-[12em] sm:w-[12em] rounded-3xl">
@@ -34,7 +34,7 @@ function Home() {
           </div>
         </div>
       ) : (
-        <section className="flex flex-col items-center justify-center min-h-screen relative italiana-regular">
+        <section className="flex flex-col items-center justify-center min-h-screen relative">
           <div className="border-[#0E48C5] border-[.3em] px-1 py-1 rounded-3xl w-full sm:w-80">
             <div className="flex flex-col justify-center items-center gap-4 bg-[#0E48C5] backdrop-filter backdrop-blur-lg p-6 rounded-3xl shadow-lg">
               <img
@@ -65,13 +65,10 @@ function Home() {
               </div>
             </div>
           </div>
-          <div className="w-[10em] h-[5em] border-[#0E48C5] border-[.2em] rounded-2xl mt-[1em] flex justify-center items-center">
-            <div className=" w-[9em] h-[4em] bg-[#0E48C5] rounded-2xl flex justify-center items-center px-[2em] flex-col">
-              <div className="text-white text-sm text-nowrap">
-                {" "}
-                Operation hours:
-              </div>
-              <div className="text-white text-sm"> 9:00 - 24:00</div>
+          <div className="border-[#0E48C5] border-[.3em] px-1 py-1 rounded-3xl w-full mt-[1em]">
+            <div className="px-[2em] py-[1em] bg-[#0E48C5] text-white rounded-3xl border-[.3em] border-[#0E48C5] flex items-center">
+              <FaClock className="mr-2" /> {/* Add the clock icon */}
+              <div className="opacity-100">Operation hours: 9:00 - 24:00</div>
             </div>
           </div>
         </section>
