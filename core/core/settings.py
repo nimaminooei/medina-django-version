@@ -88,8 +88,8 @@ WSGI_APPLICATION = 'core.wsgi.application'
 CORS_ALLOW_ALL_ORIGINS = True
 
 CORS_ALLOWED_ORIGINS = [
-    "https://medinarestaurant.org", 
-    "https://www.medinarestaurant.org",     
+    "http://medinarestaurant.org", 
+    "http://www.medinarestaurant.org",     
     "http://localhost:8080",
     "http://188.121.102.92",               
     "http://188.121.102.92:8080",               
@@ -99,8 +99,8 @@ CORS_ALLOWED_ORIGINS = [
 
 
 CSRF_TRUSTED_ORIGINS = [
-    "https://medina-restaurant.ir",
-    "https://www.medina-restaurant.ir",
+    "http://medinarestaurant.org",
+    "http://www.medinarestaurant.org",
 ]
 
 
