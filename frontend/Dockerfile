@@ -12,7 +12,7 @@ RUN npm install
 
 
 COPY . .
-
+ENV PATH="/app/node_modules/.bin:$PATH"
 EXPOSE 3000
 # اجرای اپلیکیشن
 CMD ["npm", "start"]
