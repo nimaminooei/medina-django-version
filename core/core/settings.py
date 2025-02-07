@@ -29,7 +29,7 @@ ALLOWED_HOSTS = [
     "medinarestaurant.org",
     "www.medinarestaurant.org",
     "example.com",
-    "188.121.102.92",
+    "37.152.181.80",
 ]
 
 
@@ -91,8 +91,8 @@ CORS_ALLOWED_ORIGINS = [
     "http://medinarestaurant.org", 
     "http://www.medinarestaurant.org",     
     "http://localhost:8080",
-    "http://188.121.102.92",               
-    "http://188.121.102.92:8080",               
+    "http://37.152.181.80",            
+    "http://37.152.181.80:8000",                           
     "http://127.0.0.1:5500",                
     "http://127.0.0.1",                     
 ]
