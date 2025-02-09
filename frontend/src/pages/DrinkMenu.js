@@ -14,7 +14,7 @@ function DrinkMenu() {
 
   useEffect(() => {
     axios
-      .get("https://medina-restaurant.ir/api/items/?format=json&side=DRINK")
+      .get("http://medinarestaurant.org/api/items/?format=json&side=DRINK")
       .then((response) => {
         setCategories(response.data.categories);
         fetchCards(response.data.categories[0].id);
@@ -26,7 +26,7 @@ function DrinkMenu() {
 
   const fetchCards = (categoryId) => {
     axios
-      .get("https://medina-restaurant.ir/api/items/?format=json")
+      .get("http://medinarestaurant.org/api/items/?format=json")
       .then((response) => {
         const newCards = response.data.items.filter(
           (item) => item.categoryId === categoryId

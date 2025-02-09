@@ -28,7 +28,7 @@ function FoodMenu() {
   const fetchCards = (categoryId) => {
     // Load menu items from the JSON file in the public folder
     axios
-      .get("https://medina-restaurant.ir/api/items/?format=json")
+      .get("http://medinarestaurant.org/api/items/?format=json")
       .then((response) => {
         const newCards = response.data.items.filter(
           (item) => item.categoryId === categoryId
