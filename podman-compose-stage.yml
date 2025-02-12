@@ -13,6 +13,7 @@ services:
     environment:
       - SECRET_KEY=test
       - DEBUG=False
+    restart: always
     depends_on:
       - frontend
       
@@ -21,6 +22,7 @@ services:
       context: ./frontend 
     container_name: frontend  
     command: npm start
+    restart: always
     volumes:
       - ./frontend:/app
     ports:

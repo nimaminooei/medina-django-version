@@ -51,6 +51,7 @@ services:
       - SECRET_KEY=test
       - DEBUG=True
       - ALLOWED_HOSTS=*
+    restart: always
     networks:
       - app-network
 
@@ -65,12 +66,14 @@ services:
       - "3000:3000"
     stdin_open: true
     tty: true
+    restart: always
     networks:
       - app-network
 
   nginx:
     image: nginx:latest
     container_name: nginx
+    restart: always
     ports:
       - "80:80"
     volumes:
