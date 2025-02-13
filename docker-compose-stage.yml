@@ -14,8 +14,6 @@ services:
       - SECRET_KEY=test
       - DEBUG=False
     restart: always
-    depends_on:
-      - frontend
       
   frontend:
     build:
