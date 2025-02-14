@@ -15,7 +15,7 @@ function FoodMenu() {
   useEffect(() => {
     // Load all menu categories from the JSON file in the public folder
     axios
-      .get("http://medinarestaurant.org/api/items/?format=json&side=FOOD")
+      .get("https://medinarestaurant.org/api/items/?format=json&side=FOOD")
       .then((response) => {
         setCategories(response.data.categories); // No filter, display all categories
         fetchCards(response.data.categories[0].id);
@@ -28,7 +28,7 @@ function FoodMenu() {
   const fetchCards = (categoryId) => {
     // Load menu items from the JSON file in the public folder
     axios
-      .get("http://medinarestaurant.org/api/items/?format=json")
+      .get("https://medinarestaurant.org/api/items/?format=json")
       .then((response) => {
         const newCards = response.data.items.filter(
           (item) => item.categoryId === categoryId
