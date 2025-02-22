@@ -120,7 +120,7 @@ function FoodMenu() {
             <h2 className="flex justify-center items-center text-2xl py-1  font-bold bg-blue-700 rounded-full w-60">
               {card.name}
             </h2>
-            <p className="text-center rtl text-gray-600">
+            <p className="text-center text-gray-600" dir="rtl">
               {card.description}
             </p>
             <div className="flex justify-between gap-[8em] items-center mt-4 w-[100%]">
