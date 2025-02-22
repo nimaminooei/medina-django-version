@@ -60,7 +60,7 @@ function Home() {
                   className="text-white border-white border-[.1em] flex items-center justify-center rounded-full w-[14em] h-[3em] sm:w-[12em] sm:h-[2.5em] transform transition-transform duration-300 ease-in-out scale-90 text-ellipsis overflow-hidden whitespace-nowrap text-[1.1em]"
                 >
                   <FaGlassCheers className="mr-2" /> {/* Add the drink icon */}
-                  Drink Menu
+                  Bar Menu
                 </button>
               </div>
             </div>
@@ -68,7 +68,7 @@ function Home() {
           <div className="border-[#0E48C5] border-[.3em] px-1 py-1 rounded-3xl w-full mt-[1em]">
             <div className="px-[2em] py-[1em] bg-[#0E48C5] text-white rounded-3xl border-[.3em] border-[#0E48C5] flex items-center">
               <FaClock className="mr-2" /> {/* Add the clock icon */}
-              <div className="opacity-100">Operation hours: 9:00 - 24:00</div>
+              <div className="opacity-100">Operation hours: 8:30 - 24:00</div>
             </div>
           </div>
         </section>
